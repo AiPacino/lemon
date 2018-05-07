@@ -1,0 +1,28 @@
+<table class="table table-striped">
+    <input id="data_id" type="hidden" value="{$id}"/>
+</table>
+<div class="hide layer-footer">
+    <label class="control-label col-xs-12 col-sm-2"></label>
+    <div class="col-xs-12 col-sm-8">
+        <button class="btn-apply-confirm btn btn-success btn-embossed">{:__('OK')}</button>
+        <button type="reset" class="btn btn-primary btn-embossed btn-close" onclick="Layer.closeAll();">{:__('Close')}</button>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+
+</script>
+<script type="text/javascript">
+    $('.btn-apply-confirm').on("click", function (e) {
+        var id = $('#data_id').val();
+        if(!id){
+            alert('选择不正确');
+        }
+        var url = "{:url('/api/auth/permit_tixian')}"+'?tixian_id='+id;
+        $.get(url, function(data, status){
+            alert('提示：'+data['msg']);
+        });
+    });
+</script>

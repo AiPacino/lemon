@@ -1,0 +1,52 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label for="c-openid" class="control-label col-xs-12 col-sm-2">{:__('Openid')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-openid" data-rule="required" class="form-control" name="row[openid]" type="number">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-real_name" class="control-label col-xs-12 col-sm-2">{:__('Real_name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-real_name" data-rule="required" class="form-control" name="row[real_name]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-iphone" class="control-label col-xs-12 col-sm-2">{:__('Iphone')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-iphone" data-rule="required" class="form-control" name="row[iphone]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-wx_token" class="control-label col-xs-12 col-sm-2">{:__('Wx_token')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-wx_token" class="form-control" name="row[wx_token]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-zhifubao" class="control-label col-xs-12 col-sm-2">{:__('Zhifubao')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-zhifubao" class="form-control" name="row[zhifubao]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-reason" class="control-label col-xs-12 col-sm-2">{:__('Reason')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-reason" data-rule="required" class="form-control " rows="5" name="row[reason]" cols="50"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-status" class="control-label col-xs-12 col-sm-2">{:__('Status')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-status" data-rule="required" class="form-control" name="row[status]" type="number" value="1">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

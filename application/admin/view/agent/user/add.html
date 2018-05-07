@@ -1,0 +1,124 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label for="c-openid" class="control-label col-xs-12 col-sm-2">{:__('Openid')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-openid" data-rule="required" class="form-control" name="row[openid]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-nick" class="control-label col-xs-12 col-sm-2">{:__('Nick')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-nick" class="form-control" name="row[nick]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-sex" class="control-label col-xs-12 col-sm-2">{:__('Sex')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-sex" data-rule="required" class="form-control" name="row[sex]" type="number" value="1">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-province" class="control-label col-xs-12 col-sm-2">{:__('Province')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-province" class="form-control" name="row[province]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-city" class="control-label col-xs-12 col-sm-2">{:__('City')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class='control-relative'><input id="c-city" class="form-control" data-toggle="city-picker" name="row[city]" type="text"></div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-fid" class="control-label col-xs-12 col-sm-2">{:__('Fid')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-fid" data-rule="required" class="form-control" name="row[fid]" type="text" value="base">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-head_img" class="control-label col-xs-12 col-sm-2">{:__('Head_img')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-head_img" class="form-control" name="row[head_img]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-is_agent" class="control-label col-xs-12 col-sm-2">{:__('Is_agent')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-is_agent" data-rule="required" class="form-control" name="row[is_agent]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-money" class="control-label col-xs-12 col-sm-2">{:__('Money')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-money" data-rule="required" class="form-control" name="row[money]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-pid" class="control-label col-xs-12 col-sm-2">{:__('Pid')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-pid" class="form-control" name="row[pid]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-customer_count" class="control-label col-xs-12 col-sm-2">{:__('Customer_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-customer_count" data-rule="required" class="form-control" name="row[customer_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-order_count" class="control-label col-xs-12 col-sm-2">{:__('Order_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-order_count" data-rule="required" class="form-control" name="row[order_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-total_commission" class="control-label col-xs-12 col-sm-2">{:__('Total_commission')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-total_commission" data-rule="required" class="form-control" name="row[total_commission]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-request_code" class="control-label col-xs-12 col-sm-2">{:__('Request_code')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-request_code" data-rule="required" class="form-control" name="row[request_code]" type="text" value="lhyqh0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-tixian" class="control-label col-xs-12 col-sm-2">{:__('Tixian')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-tixian" data-rule="required" class="form-control" name="row[tixian]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-spread_count" class="control-label col-xs-12 col-sm-2">{:__('Spread_count')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-spread_count" data-rule="required" class="form-control" name="row[spread_count]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-spread_money" class="control-label col-xs-12 col-sm-2">{:__('Spread_money')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-spread_money" data-rule="required" class="form-control" name="row[spread_money]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-status" class="control-label col-xs-12 col-sm-2">{:__('Status')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-status" data-rule="required" class="form-control" name="row[status]" type="number" value="1">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="c-agent_time" class="control-label col-xs-12 col-sm-2">{:__('Agent_time')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-agent_time" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[agent_time]" type="text" value="{:date('Y-m-d H:i:s')}">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

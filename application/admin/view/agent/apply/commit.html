@@ -1,0 +1,68 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th style="width: 200px">真实姓名</th>
+        <th style="width: 200px">{$data.real_name}</th>
+
+        <th style="width: 200px">联系方式</th>
+        <th style="width: 200px">{$data.phone}</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th style="width: 200px">申请微信</th>
+        <th style="width: 200px">{$data.wx_token}</th>
+
+        <th style="width: 200px">申请支付宝</th>
+        <th style="width: 200px">{$data.zhifubao}</th>
+    </tr>
+    <tr>
+        <th style="width: 200px">申请理由</th>
+        <th style="width: 200px">{$data.reason}</th>
+
+        <th style="width: 200px">申请时间</th>
+        <th style="width: 200px">{$data.apply_time}</th>
+    </tr>
+
+    <tr>
+        <th style="width: 200px">微信昵称</th>
+        <th style="width: 200px">{$data.nick}</th>
+
+        <th style="width: 200px">头像</th>
+        <th style="width: 200px"><img src="{$data.head_img}" style="width: 160px;height: 160px;"></th>
+    </tr>
+
+    <tr>
+        <th style="width: 200px">首次登录小程序时间</th>
+        <th style="width: 200px">{$data.create_time}</th>
+    </tr>
+
+    <input id="data_id" type="hidden" value="{$data.id}"/>
+    </tbody>
+</table>
+<div class="hide layer-footer">
+    <label class="control-label col-xs-12 col-sm-2"></label>
+    <div class="col-xs-12 col-sm-8">
+        <button class="btn-apply-confirm btn btn-success btn-embossed">{:__('OK')}</button>
+        <button type="reset" class="btn btn-primary btn-embossed btn-close" onclick="Layer.closeAll();">{:__('Close')}</button>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+
+</script>
+<script type="text/javascript">
+    $('.btn-apply-confirm').on("click", function (e) {
+        var id = $('#data_id').val();
+        if(!id){
+            alert('选择不正确');
+        }
+        var url = "{:url('/api/auth/permit_agent')}"+'?apply_id='+id;
+        $.get(url, function(data, status){
+            alert('提示：'+data['msg']);
+        });
+    });
+</script>
